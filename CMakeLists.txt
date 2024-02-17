@@ -5,4 +5,7 @@ set(CMAKE_CXX_STANDART 14)
 include_directories(lib)
 include_directories(include)
 
+add_library(cxxopts STATIC lib/cxxopts/cxxopts.hpp)
+set_target_properties(cxxopts PROPERTIES LINKER_LANGUAGE CXX)
+
 add_executable(SmplTorrentClient src/main.cpp)
